@@ -1,20 +1,3 @@
-<!--
-=========================================================
- Paper Dashboard 2 - v2.0.0
-=========================================================
-
- Product Page: https://www.creative-tim.com/product/paper-dashboard-2
- Copyright 2019 Creative Tim (https://www.creative-tim.com)
- Licensed under MIT (https://github.com/creativetimofficial/paper-dashboard/blob/master/LICENSE)
-
- Coded by Creative Tim
-
-=========================================================
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -38,14 +21,14 @@ The above copyright notice and this permission notice shall be included in all c
 </head>
 <style>
     .drip {
-        width: 60px;
+        width: 40px;
         height: 80px;
         background: #ccc;
         border-style: solid;
         border-width: 1.5px;
         border-radius: 15%;
-        border-color:#17a2b8;
-        left:5%;
+        border-color: #17a2b8;
+        left: 5%;
         overflow: hidden;
         position: relative;
         z-index: 9;
@@ -61,8 +44,8 @@ The above copyright notice and this permission notice shall be included in all c
         background: #00BFFF;
         -webkit-animation: mymove 5s forwards;
     }
-    
-    </style>
+</style>
+
 <body class="">
     <div class="wrapper ">
         <div class="sidebar" data-color="white" data-active-color="danger">
@@ -339,7 +322,7 @@ The above copyright notice and this permission notice shall be included in all c
                                 <hr>
                                 <div class="stats">
                                     <div style="overflow: hidden;">
-                                        <button type="button" id ="profile1" class="btn btn-primary btn-round btn1" data-toggle="modal" data-target="#myModal" style="float: left;">Patient Profile</button>
+                                        <button type="button" id="profile1" class="btn btn-primary btn-round btn1" data-toggle="modal" data-target="#myModal" style="float: left;">Patient Profile</button>
                                         <button type="button" class="btn btn-primary btn-round" data-toggle="modal" data-target="#myModal" style="float: left;">Manage Bed</button>
                                     </div>
                                 </div>
@@ -368,7 +351,7 @@ The above copyright notice and this permission notice shall be included in all c
                                 <hr>
                                 <div class="stats">
                                     <div style="overflow: hidden;">
-                                        <button type="button" id ="profile2" class="btn btn-primary btn-round btn1" data-toggle="modal" data-target="#myModal" style="float: left;">Patient Profile</button>
+                                        <button type="button" id="profile2" class="btn btn-primary btn-round btn1" data-toggle="modal" data-target="#myModal" style="float: left;">Patient Profile</button>
                                         <button type="button" class="btn btn-primary btn-round" data-toggle="modal" data-target="#myModal" style="float: left;">Manage Bed</button>
                                     </div>
                                 </div>
@@ -397,7 +380,7 @@ The above copyright notice and this permission notice shall be included in all c
                                 <hr>
                                 <div class="stats">
                                     <div style="overflow: hidden;">
-                                        <button type="button" id ="profile3" class="btn btn-primary btn-round btn1" data-toggle="modal" data-target="#myModal" style="float: left;">Patient Profile</button>
+                                        <button type="button" id="profile3" class="btn btn-primary btn-round btn1" data-toggle="modal" data-target="#myModal" style="float: left;">Patient Profile</button>
                                         <button type="button" class="btn btn-primary btn-round" data-toggle="modal" data-target="#myModal" style="float: left;">Manage Bed</button>
                                     </div>
                                 </div>
@@ -428,7 +411,7 @@ The above copyright notice and this permission notice shall be included in all c
                                 <hr>
                                 <div class="stats">
                                     <div style="overflow: hidden;">
-                                        <button type="button" id ="profile4" class="btn btn-primary btn-round btn1" data-toggle="modal" data-target="#myModal" style="float: left;">Patient Profile</button>
+                                        <button type="button" id="profile4" class="btn btn-primary btn-round btn1" data-toggle="modal" data-target="#myModal" style="float: left;">Patient Profile</button>
                                         <button type="button" class="btn btn-primary btn-round" data-toggle="modal" data-target="#myModal" style="float: left;">Manage Bed</button>
                                     </div>
                                 </div>
@@ -457,7 +440,7 @@ The above copyright notice and this permission notice shall be included in all c
                                 <hr>
                                 <div class="stats">
                                     <div style="overflow: hidden;">
-                                        <button type="button" id ="profile5" class="btn btn-primary btn-round btn1" data-toggle="modal" data-target="#myModal" style="float: left;">Patient Profile</button>
+                                        <button type="button" id="profile5" class="btn btn-primary btn-round btn1" data-toggle="modal" data-target="#myModal" style="float: left;">Patient Profile</button>
                                         <button type="button" class="btn btn-primary btn-round" data-toggle="modal" data-target="#myModal" style="float: left;">Manage Bed</button>
                                     </div>
                                 </div>
@@ -685,14 +668,12 @@ The above copyright notice and this permission notice shall be included in all c
 
                     info = data[bedname];
                     var vacancy = info['patient'];
-                        if(vacancy==1)
-                        {
-                          document.getElementById("occupied"+i).style.color="#6bd098";
-                        }
-                        else{
-                          document.getElementById("occupied"+i).style.color="grey";
-                          continue;
-                        }
+                    if (vacancy == 1) {
+                        document.getElementById("occupied" + i).style.color = "#6bd098";
+                    } else {
+                        document.getElementById("occupied" + i).style.color = "grey";
+                        continue;
+                    }
                     if (info != undefined) {
                         keys = ['patientname', 'doctorname', 'medicine', 'rate', 'timeleft'];
                         keys.forEach(key => {
@@ -704,10 +685,10 @@ The above copyright notice and this permission notice shall be included in all c
                         });
                         var level = info['Level'];
                         console.log(level);
-                        var y = document.getElementById("drip"+i);
+                        var y = document.getElementById("drip" + i);
                         var style = document.createElement('style');
-                        level=Math.floor((Math.random() * 100) + 1);
-                        style.innerHTML = `@keyframes mymove {0% {top: 100%;background: purple}100%{top:` +level+`%;background: #add8e6}}`;
+                        level = Math.floor((Math.random() * 100) + 1);
+                        style.innerHTML = `@keyframes mymove {0% {top: 100%;background: purple}100%{top:` + level + `%;background: #add8e6}}`;
                         y.appendChild(style);
                     }
                 }
