@@ -268,3 +268,21 @@
         width: auto;
         max-width: 1000px;
     }
+    
+    table,
+    th,
+    td {
+        border: 1px grey;
+        border-collapse: collapse;
+        border-radius: 30px !important;
+        padding: 9px 18px;
+        font-weight: lighter !important;
+    }
+    
+    li {
+        list-style-type: none;
+    }
+    
+    .colm1 {
+        font-weight: bold !important;
+    }
