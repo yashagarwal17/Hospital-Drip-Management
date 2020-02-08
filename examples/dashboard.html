@@ -36,7 +36,33 @@ The above copyright notice and this permission notice shall be included in all c
     <!-- CSS Just for demo purpose, don't include it in your project -->
     <link href="../assets/demo/demo.css" rel="stylesheet" />
 </head>
-
+<style>
+    .drip {
+        width: 60px;
+        height: 80px;
+        background: #ccc;
+        border-style: solid;
+        border-width: 1.5px;
+        border-radius: 15%;
+        border-color:#17a2b8;
+        left:5%;
+        overflow: hidden;
+        position: relative;
+        z-index: 9;
+    }
+    
+    .drip:before {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #00BFFF;
+        -webkit-animation: mymove 5s forwards;
+    }
+    
+    </style>
 <body class="">
     <div class="wrapper ">
         <div class="sidebar" data-color="white" data-active-color="danger">
@@ -295,6 +321,7 @@ The above copyright notice and this permission notice shall be included in all c
                         <div class="card ">
                             <div class="card-header ">
                                 <h5 class="card-title" id="Bed1">Bed 1</h5>
+                                <i id="occupied1" class="nc-icon nc-single-02" style="float: right; font-size:40px; "></i>
                                 <p class="card-category" id="patientnameBed1">Patient Name : </p>
                                 <p class="card-category" id="doctornameBed1">Doctor Alloted :</p>
                             </div>
@@ -312,7 +339,7 @@ The above copyright notice and this permission notice shall be included in all c
                                 <hr>
                                 <div class="stats">
                                     <div style="overflow: hidden;">
-                                        <button type="button" class="btn btn-primary btn-round btn1" data-toggle="modal" data-target="#myModal" style="float: left;">Patient Profile</button>
+                                        <button type="button" id ="profile1" class="btn btn-primary btn-round btn1" data-toggle="modal" data-target="#myModal" style="float: left;">Patient Profile</button>
                                         <button type="button" class="btn btn-primary btn-round" data-toggle="modal" data-target="#myModal" style="float: left;">Manage Bed</button>
                                     </div>
                                 </div>
@@ -323,6 +350,7 @@ The above copyright notice and this permission notice shall be included in all c
                         <div class="card ">
                             <div class="card-header ">
                                 <h5 class="card-title" id="Bed2">Bed 2</h5>
+                                <i id="occupied2" class="nc-icon nc-single-02" style="float: right; font-size:40px; "></i>
                                 <p class="card-category" id="patientnameBed2">Patient Name : </p>
                                 <p class="card-category" id="doctornameBed2">Doctor Alloted :</p>
                             </div>
@@ -340,7 +368,7 @@ The above copyright notice and this permission notice shall be included in all c
                                 <hr>
                                 <div class="stats">
                                     <div style="overflow: hidden;">
-                                        <button type="button" class="btn btn-primary btn-round btn1" data-toggle="modal" data-target="#myModal" style="float: left;">Patient Profile</button>
+                                        <button type="button" id ="profile2" class="btn btn-primary btn-round btn1" data-toggle="modal" data-target="#myModal" style="float: left;">Patient Profile</button>
                                         <button type="button" class="btn btn-primary btn-round" data-toggle="modal" data-target="#myModal" style="float: left;">Manage Bed</button>
                                     </div>
                                 </div>
@@ -351,6 +379,7 @@ The above copyright notice and this permission notice shall be included in all c
                         <div class="card ">
                             <div class="card-header ">
                                 <h5 class="card-title" id="Bed3">Bed 3</h5>
+                                <i id="occupied3" class="nc-icon nc-single-02" style="float: right; font-size:40px; "></i>
                                 <p class="card-category" id="patientnameBed3">Patient Name : </p>
                                 <p class="card-category" id="doctornameBed3">Doctor Alloted :</p>
                             </div>
@@ -368,7 +397,7 @@ The above copyright notice and this permission notice shall be included in all c
                                 <hr>
                                 <div class="stats">
                                     <div style="overflow: hidden;">
-                                        <button type="button" class="btn btn-primary btn-round btn1" data-toggle="modal" data-target="#myModal" style="float: left;">Patient Profile</button>
+                                        <button type="button" id ="profile3" class="btn btn-primary btn-round btn1" data-toggle="modal" data-target="#myModal" style="float: left;">Patient Profile</button>
                                         <button type="button" class="btn btn-primary btn-round" data-toggle="modal" data-target="#myModal" style="float: left;">Manage Bed</button>
                                     </div>
                                 </div>
@@ -381,6 +410,7 @@ The above copyright notice and this permission notice shall be included in all c
                         <div class="card ">
                             <div class="card-header ">
                                 <h5 class="card-title" id="Bed4">Bed 4</h5>
+                                <i id="occupied4" class="nc-icon nc-single-02" style="float: right; font-size:40px;"></i>
                                 <p class="card-category" id="patientnameBed4">Patient Name : </p>
                                 <p class="card-category" id="doctornameBed4">Doctor Alloted :</p>
                             </div>
@@ -398,7 +428,7 @@ The above copyright notice and this permission notice shall be included in all c
                                 <hr>
                                 <div class="stats">
                                     <div style="overflow: hidden;">
-                                        <button type="button" class="btn btn-primary btn-round btn1" data-toggle="modal" data-target="#myModal" style="float: left;">Patient Profile</button>
+                                        <button type="button" id ="profile4" class="btn btn-primary btn-round btn1" data-toggle="modal" data-target="#myModal" style="float: left;">Patient Profile</button>
                                         <button type="button" class="btn btn-primary btn-round" data-toggle="modal" data-target="#myModal" style="float: left;">Manage Bed</button>
                                     </div>
                                 </div>
@@ -409,6 +439,7 @@ The above copyright notice and this permission notice shall be included in all c
                         <div class="card ">
                             <div class="card-header ">
                                 <h5 class="card-title" id="Bed5">Bed 5</h5>
+                                <i id="occupied5" class="nc-icon nc-single-02" style="float: right; font-size:40px; "></i>
                                 <p class="card-category" id="patientnameBed5">Patient Name : </p>
                                 <p class="card-category" id="doctornameBed5">Doctor Alloted :</p>
                             </div>
@@ -426,7 +457,7 @@ The above copyright notice and this permission notice shall be included in all c
                                 <hr>
                                 <div class="stats">
                                     <div style="overflow: hidden;">
-                                        <button type="button" class="btn btn-primary btn-round btn1" data-toggle="modal" data-target="#myModal" style="float: left;">Patient Profile</button>
+                                        <button type="button" id ="profile5" class="btn btn-primary btn-round btn1" data-toggle="modal" data-target="#myModal" style="float: left;">Patient Profile</button>
                                         <button type="button" class="btn btn-primary btn-round" data-toggle="modal" data-target="#myModal" style="float: left;">Manage Bed</button>
                                     </div>
                                 </div>
@@ -653,7 +684,15 @@ The above copyright notice and this permission notice shall be included in all c
                     var dripname = "drip" + i;
 
                     info = data[bedname];
-
+                    var vacancy = info['patient'];
+                        if(vacancy==1)
+                        {
+                          document.getElementById("occupied"+i).style.color="#6bd098";
+                        }
+                        else{
+                          document.getElementById("occupied"+i).style.color="grey";
+                          continue;
+                        }
                     if (info != undefined) {
                         keys = ['patientname', 'doctorname', 'medicine', 'rate', 'timeleft'];
                         keys.forEach(key => {
@@ -663,6 +702,13 @@ The above copyright notice and this permission notice shall be included in all c
                                 el.innerHTML += value;
                             }
                         });
+                        var level = info['Level'];
+                        console.log(level);
+                        var y = document.getElementById("drip"+i);
+                        var style = document.createElement('style');
+                        level=Math.floor((Math.random() * 100) + 1);
+                        style.innerHTML = `@keyframes mymove {0% {top: 100%;background: purple}100%{top:` +level+`%;background: #add8e6}}`;
+                        y.appendChild(style);
                     }
                 }
             });
