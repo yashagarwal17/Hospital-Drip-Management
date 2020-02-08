@@ -44,7 +44,7 @@ The above copyright notice and this permission notice shall be included in all c
   background: #ccc;
   border-style: solid;
   border-width: 1px;
-  border-radius: 50%;
+  border-radius: 15%;
   overflow: hidden;
   position: relative;
   z-index: 9;
@@ -59,8 +59,8 @@ The above copyright notice and this permission notice shall be included in all c
 }
 
 @keyframes mymove {
-  0%   {top: 100%; background: red}
-  100% {top: 20%; background: blue}
+  0%   {top: 100%; background: royalblue}
+  100% {top: 20%; background: #add8e6}
 }
 </style>
 <body class="">
@@ -320,20 +320,20 @@ The above copyright notice and this permission notice shall be included in all c
           <div class="col-md-4">
             <div class="card ">
               <div class="card-header ">
-                <h5 class="card-title">Bed Id</h5>
-                <p class="card-category">Patient Name : </p>
-                <p class="card-category">Doctor Alloted :</p>
+                <h5 class="card-title" id ="Bed1">Bed 1</h5>
+                <p class="card-category" id="patientnameBed1">Patient Name : </p>
+                <p class="card-category" id="doctornameBed1">Doctor Alloted :</p>
               </div>
               <div class="card-body " style="overflow: hidden; color:black">
-                <div class="drip" style="float: left;"></div>
+                <div id ="drip1" class="drip" style="float: left;"></div>
                 <br>
-                <div style="float: right; color: black;">Rate :</div>
+                <div style="float: right; color: black;" id="rateBed1">Rate :</div>
                 <br><br>
-                <div style="float: right; color: black">Time Left :</div>
+                <div style="float: right; color: black" id="timeleftBed1">Time Left :</div>
               </div>
               <div class="card-footer ">
                 <div class="legend">
-                  <p class="card-category">Medicine : </p>
+                  <p class="card-category" id="medicineBed1">Medicine : </p>
                 </div>
                 <hr>
                 <div class="stats">
@@ -348,20 +348,20 @@ The above copyright notice and this permission notice shall be included in all c
           <div class="col-md-4">
               <div class="card ">
                 <div class="card-header ">
-                  <h5 class="card-title">Bed Id</h5>
-                  <p class="card-category">Patient Name : </p>
-                  <p class="card-category">Doctor Alloted :</p>
+                  <h5 class="card-title" id= "Bed2">Bed 2</h5>
+                  <p class="card-category" id="patientnameBed2">Patient Name : </p>
+                  <p class="card-category" id="doctornameBed2">Doctor Alloted :</p>
                 </div>
                 <div class="card-body " style="overflow: hidden; color:black">
-                  <div class="drip" style="float: left;"></div>
+                  <div id ="drip2" class="drip" style="float: left;"></div>
                   <br>
-                  <div style="float: right; color: black;">Rate :</div>
+                  <div style="float: right; color: black;" id="rateBed2">Rate :</div>
                   <br><br>
-                  <div style="float: right; color: black">Time Left :</div>
+                  <div style="float: right; color: black" id="timeleftBed2">Time Left :</div>
                 </div>
                 <div class="card-footer ">
                   <div class="legend">
-                    <p class="card-category">Medicine : </p>
+                    <p class="card-category" id="medicineBed2">Medicine : </p>
                   </div>
                   <hr>
                   <div class="stats">
@@ -376,20 +376,20 @@ The above copyright notice and this permission notice shall be included in all c
             <div class="col-md-4">
                 <div class="card ">
                   <div class="card-header ">
-                    <h5 class="card-title">Bed Id</h5>
-                    <p class="card-category">Patient Name : </p>
-                    <p class="card-category">Doctor Alloted :</p>
+                    <h5 class="card-title" id = "Bed3">Bed 3</h5>
+                    <p class="card-category" id="patientnameBed3">Patient Name : </p>
+                    <p class="card-category" id="doctornameBed3">Doctor Alloted :</p>
                   </div>
                   <div class="card-body " style="overflow: hidden; color:black">
-                    <div class="drip" style="float: left;"></div>
+                    <div id ="drip3" class="drip" style="float: left;"></div>
                     <br>
-                    <div style="float: right; color: black;">Rate :</div>
+                    <div style="float: right; color: black;" id="rateBed3">Rate :</div>
                     <br><br>
-                    <div style="float: right; color: black">Time Left :</div>
+                    <div style="float: right; color: black" id="timeleftBed3">Time Left :</div>
                   </div>
                   <div class="card-footer ">
                     <div class="legend">
-                      <p class="card-category">Medicine : </p>
+                      <p class="card-category" id="medicineBed3">Medicine : </p>
                     </div>
                     <hr>
                     <div class="stats">
@@ -406,20 +406,20 @@ The above copyright notice and this permission notice shall be included in all c
               <div class="col-md-4">
                 <div class="card ">
                   <div class="card-header ">
-                    <h5 class="card-title">Bed Id</h5>
-                    <p class="card-category">Patient Name : </p>
-                    <p class="card-category">Doctor Alloted :</p>
+                    <h5 class="card-title" id="Bed4">Bed 4</h5>
+                    <p class="card-category" id="patientnameBed4" >Patient Name : </p>
+                    <p class="card-category" id="doctornameBed4">Doctor Alloted :</p>
                   </div>
                   <div class="card-body " style="overflow: hidden; color:black">
-                    <div class="drip" style="float: left;"></div>
+                    <div id ="drip4" class="drip" style="float: left;"></div>
                     <br>
-                    <div style="float: right; color: black;">Rate :</div>
+                    <div style="float: right; color: black;" id="rateBed4">Rate :</div>
                     <br><br>
-                    <div style="float: right; color: black">Time Left :</div>
+                    <div style="float: right; color: black" id="timeleftBed4">Time Left :</div>
                   </div>
                   <div class="card-footer ">
                     <div class="legend">
-                      <p class="card-category">Medicine : </p>
+                      <p class="card-category" id="medicineBed4">Medicine : </p>
                     </div>
                     <hr>
                     <div class="stats">
@@ -434,20 +434,20 @@ The above copyright notice and this permission notice shall be included in all c
               <div class="col-md-4">
                   <div class="card ">
                     <div class="card-header ">
-                      <h5 class="card-title">Bed Id</h5>
-                      <p class="card-category">Patient Name : </p>
-                      <p class="card-category">Doctor Alloted :</p>
+                      <h5 class="card-title" id="Bed5">Bed 5</h5>
+                      <p class="card-category" id="patientnameBed5">Patient Name : </p>
+                      <p class="card-category" id="doctornameBed5">Doctor Alloted :</p>
                     </div>
                     <div class="card-body " style="overflow: hidden; color:black">
-                      <div class="drip" style="float: left;"></div>
+                      <div id ="drip5" class="drip" style="float: left;"></div>
                       <br>
-                      <div style="float: right; color: black;">Rate :</div>
+                      <div style="float: right; color: black;" id="rateBed5">Rate :</div>
                       <br><br>
-                      <div style="float: right; color: black">Time Left :</div>
+                      <div style="float: right; color: black" id="timeleftBed5">Time Left :</div>
                     </div>
                     <div class="card-footer ">
                       <div class="legend">
-                        <p class="card-category">Medicine : </p>
+                        <p class="card-category" id="medicineBed5">Medicine : </p>
                       </div>
                       <hr>
                       <div class="stats">
@@ -507,12 +507,100 @@ The above copyright notice and this permission notice shall be included in all c
   <script src="../assets/js/paper-dashboard.min.js?v=2.0.0" type="text/javascript"></script>
   <!-- Paper Dashboard DEMO methods, don't include it in your project! -->
   <script src="../assets/demo/demo.js"></script>
-  <script>
-    $(document).ready(function() {
-      // Javascript method's body can be found in assets/assets-for-demo/js/demo.js
-      demo.initChartsPages();
-    });
-  </script>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-database.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDIrVMXhqTM6kYkYUhtrXvqEu-4Gp8IoSY",
+    authDomain: "drip-9a9cf.firebaseapp.com",
+    databaseURL: "https://drip-9a9cf.firebaseio.com",
+    projectId: "drip-9a9cf",
+    storageBucket: "drip-9a9cf.appspot.com",
+    messagingSenderId: "863978708489",
+    appId: "1:863978708489:web:2b656f41ea3228fe9aa2d8",
+    measurementId: "G-DW596LF5QD"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  // var ref = firebase.database().ref("Beds").child("Bed1");
+  // ref.on('value', function(snapshot) {
+  //   console.log(snapshot.val().patient)
+  // });
+  //console.log(ref);
+  var i = 5;
+  for(i=1;i<6;i++)
+  {
+    var patientname;
+    var doctorname;
+    var medicine;
+    var rate;
+    var timeleft;
+    var level;
+    var bedname = "Bed"+i;
+    var dripname = "drip"+i;
+    console.log(bedname);
+    var x = document.getElementById(bedname);
+    console.log("Beds/"+bedname)
+    var query = firebase.database().ref("Beds/"+bedname);
+    query.on("value", function(snapshot) {
+    snapshot.forEach(function(childSnapshot) {
+        // key will be "ada" the first time and "alan" the second time
+        var key = childSnapshot.key;
+        // childData will be the actual contents of the child
+        var childData = childSnapshot.val();
+
+        console.log(key);
+        if(key=='patientname')
+        {
+          patientname = childData;
+          var y = document.getElementById("patientname"+bedname);
+          y.innerHTML += childData;
+        }
+        if(key=="doctorname")
+        {
+          doctorname = childData;
+          var y = document.getElementById("doctorname"+bedname);
+          y.innerHTML += childData;
+        }
+        if(key=="medicine")
+        {
+          medicine = childData;
+          var y = document.getElementById("medicine"+bedname);
+          y.innerHTML += childData;
+        }
+        if(key=="rate")
+        {
+          rate = childData;
+          var y = document.getElementById("rate"+bedname);
+          y.innerHTML += childData;
+        }
+        if(key=="timeleft")
+        {
+          timeleft = childData;
+          var y = document.getElementById("timeleft"+bedname);
+          y.innerHTML += childData;
+        }
+        if(key=="Level")
+        {
+            var level = childData;
+            console.log(level);
+        }
+      });
+      }, function(error) {
+        console.error(error);
+      });
+      console.log(patientname + " " + doctorname+" "+medicine)
+  }
+  
+</script>
 </body>
 
 </html>
