@@ -709,80 +709,46 @@ The above copyright notice and this permission notice shall be included in all c
 
     <script>
         // Your web app's Firebase configuration
-        var firebaseConfig = {
-            apiKey: "AIzaSyDIrVMXhqTM6kYkYUhtrXvqEu-4Gp8IoSY",
-            authDomain: "drip-9a9cf.firebaseapp.com",
-            databaseURL: "https://drip-9a9cf.firebaseio.com",
-            projectId: "drip-9a9cf",
-            storageBucket: "drip-9a9cf.appspot.com",
-            messagingSenderId: "863978708489",
-            appId: "1:863978708489:web:2b656f41ea3228fe9aa2d8",
-            measurementId: "G-DW596LF5QD"
-        };
+        // var firebaseConfig = {
+        //   apiKey: "AIzaSyDIrVMXhqTM6kYkYUhtrXvqEu-4Gp8IoSY",
+        //   authDomain: "drip-9a9cf.firebaseapp.com",
+        //   databaseURL: "https://drip-9a9cf.firebaseio.com",
+        //   projectId: "drip-9a9cf",
+        //   storageBucket: "drip-9a9cf.appspot.com",
+        //   messagingSenderId: "863978708489",
+        //   appId: "1:863978708489:web:2b656f41ea3228fe9aa2d8",
+        //   measurementId: "G-DW596LF5QD"
+        // };
         // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
+
         // var ref = firebase.database().ref("Beds").child("Bed1");
         // ref.on('value', function(snapshot) {
         //   console.log(snapshot.val().patient)
         // });
         //console.log(ref);
-        var i = 5;
-        for (i = 1; i < 6; i++) {
-            var patientname;
-            var doctorname;
-            var medicine;
-            var rate;
-            var timeleft;
-            var level;
-            var bedname = "Bed" + i;
-            var dripname = "drip" + i;
-            console.log(bedname);
-            var x = document.getElementById(bedname);
-            console.log("Beds/" + bedname)
-            var query = firebase.database().ref("Beds/" + bedname);
-            query.on("value", function(snapshot) {
-                snapshot.forEach(function(childSnapshot) {
-                    // key will be "ada" the first time and "alan" the second time
-                    var key = childSnapshot.key;
-                    // childData will be the actual contents of the child
-                    var childData = childSnapshot.val();
 
-                    console.log(key);
-                    if (key == 'patientname') {
-                        patientname = childData;
-                        var y = document.getElementById("patientname" + bedname);
-                        y.innerHTML += childData;
+        fetch('https://drip-9a9cf.firebaseio.com/Beds.json')
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                for (var i = 1; i < 6; i++) {
+                    var bedname = "Bed" + i;
+                    var dripname = "drip" + i;
+
+                    info = data[bedname];
+
+                    if (info != undefined) {
+                        keys = ['patientname', 'doctorname', 'medicine', 'rate', 'timeleft'];
+                        keys.forEach(key => {
+                            value = info[key];
+                            var el = document.getElementById(key + bedname);
+                            if (el != null) {
+                                el.innerHTML += value;
+                            }
+                        });
                     }
-                    if (key == "doctorname") {
-                        doctorname = childData;
-                        var y = document.getElementById("doctorname" + bedname);
-                        y.innerHTML += childData;
-                    }
-                    if (key == "medicine") {
-                        medicine = childData;
-                        var y = document.getElementById("medicine" + bedname);
-                        y.innerHTML += childData;
-                    }
-                    if (key == "rate") {
-                        rate = childData;
-                        var y = document.getElementById("rate" + bedname);
-                        y.innerHTML += childData;
-                    }
-                    if (key == "timeleft") {
-                        timeleft = childData;
-                        var y = document.getElementById("timeleft" + bedname);
-                        y.innerHTML += childData;
-                    }
-                    if (key == "Level") {
-                        var level = childData;
-                        console.log(level);
-                    }
-                });
-            }, function(error) {
-                console.error(error);
+                }
             });
-            console.log(patientname + " " + doctorname + " " + medicine)
-        }
     </script>
 </body>
 
