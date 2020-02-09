@@ -357,7 +357,7 @@
         position: absolute;
         lightblue;
         width: 100px;
-        margin-top: 40px !important;
+        /* margin-top: 40px !important; */
         bottom: 29%;
         z-index: 1;
         border-radius: 10px 10px 28px 28px;
