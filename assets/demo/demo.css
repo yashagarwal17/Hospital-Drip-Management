@@ -220,6 +220,13 @@
         /* margin-right: 0px !important; */
     }
     
+    .btn1 {
+        font-size: 15px !important;
+        /* font-size: 12px; */
+        font-weight: 800;
+        border-radius: 20px !important;
+    }
+    
     .mymodal .modal-body {
         /* Vertical scrollbar if necessary */
         max-height: 480px;
@@ -263,4 +270,113 @@
         float: right;
         margin-top: 10px;
         font-size: 35px;
+    }
+    
+    .drip {
+        width: 40px;
+        height: 80px;
+        background: #ccc;
+        border-style: solid;
+        border-width: 1.5px;
+        border-radius: 15%;
+        border-color: #17a2b8;
+        left: 5%;
+        overflow: hidden;
+        position: relative;
+        z-index: 9;
+    }
+    
+    .drip:before {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #00BFFF;
+        -webkit-animation: mymove 5s forwards;
+    }
+    
+    li.water-bottle {
+        float: left;
+        margin-right: 15px;
+    }
+    
+    ul {
+        list-style-type: none;
+    }
+    
+    .bottle {
+        background: #ddd;
+        width: 110px;
+        border-radius: 10px 10px 30px 30px;
+        height: 200px;
+        padding: 6px;
+        box-shadow: 3px 3px 3px #efefef;
+        margin-bottom: 4px;
+    }
+    
+    .bottle:hover {
+        background: #eee;
+        box-shadow: 2px 2px 2px #efefef;
+    }
+    
+    .cap {
+        background: #ddd;
+        margin: 0 25px;
+        width: 60px;
+        border-radius: 8px 8px 10px 12px;
+        height: 35px;
+        border-top: 1px solid #ddd;
+        border-bottom: 2px dotted #efefef;
+    }
+    
+    .cap-top {
+        background: #ededed;
+        height: 6px;
+        border-radius: 10px 10px 0 0;
+    }
+    
+    .cap-seal {
+        margin-top: 20px;
+        background: #ccc;
+        height: 6px;
+        border-radius: 0 0 10px 10px;
+    }
+    
+    .water-full {
+        background: lightblue;
+        width: 100px;
+        margin-top: 10px;
+        height: 190px;
+        z-index: 1;
+        border-radius: 10px 10px 28px 28px;
+    }
+    
+    .water-medium {
+        position: absolute;
+        lightblue;
+        width: 100px;
+        margin-top: 40px !important;
+        bottom: 29%;
+        z-index: 1;
+        border-radius: 10px 10px 28px 28px;
+        -webkit-animation: mymove2 5s forwards;
+    }
+    
+    @keyframes mymove2 {
+        0% {
+            height: 0px;
+            width: 100px;
+            background: blue
+        }
+        100% {
+            height: 80px;
+            width: 100px;
+            background: #3a93ad
+        }
+    }
+    
+    .profile-card {
+        max-width: 30%;
     }
