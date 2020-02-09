@@ -44,37 +44,41 @@
         background: #00BFFF;
         -webkit-animation: mymove 5s forwards;
     }
-</style>
+    li.water-bottle { float:left;margin-right:15px;}
+  ul { list-style-type:none; }
+  
+  .bottle { background: #ddd; width:110px;border-radius:10px 10px 30px 30px; height:200px; padding:6px;box-shadow: 3px 3px 3px #efefef;margin-bottom:4px;}
+  .bottle:hover { background: #eee;box-shadow: 2px  2px 2px #efefef;}
+  
+  
+  .cap { background: #ddd; margin:0 25px;width:60px;border-radius:8px 8px 10px  12px; height:35px;border-top:1px solid #ddd; border-bottom:2px dotted #efefef;}
+  .cap-top { background:#ededed; height:6px; border-radius:10px 10px 0 0; }
+  .cap-seal { margin-top:20px;background:#ccc; height:6px; border-radius: 0 0 10px 10px; }
+  
+  .water-full { background: lightblue ;width:100px;margin-top:10px;height:190px; z-index:1;border-radius:10px 10px 28px 28px;}
+  .water-medium { position:absolute; lightblue;bottom:38%; z-index:1;border-radius:10px 10px 28px 28px;-webkit-animation: mymove2 5s forwards;}
+
+@keyframes mymove2 {0% {height:0px;width:80px;background: blue}100%{height:80px;width:100px;background: #3a93ad}} 
+  </style>
 
 <body class="">
     <div class="wrapper ">
 
-        <div class="main-panel">
+        <div class="main-panel"></div>
             <!-- Navbar -->
             <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent">
                 <div class="container-fluid">
                     <div class="navbar-wrapper">
                         <div class="navbar-toggle">
-                            <button type="button" class="navbar-toggler">
-                <span class="navbar-toggler-bar bar1"></span>
-                <span class="navbar-toggler-bar bar2"></span>
-                <span class="navbar-toggler-bar bar3"></span>
-              </button>
                         </div>
                         <a class="navbar-brand" href="#pablo">Hospital Drip Management</a>
-                    </div>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-bar navbar-kebab"></span>
-            <span class="navbar-toggler-bar navbar-kebab"></span>
-            <span class="navbar-toggler-bar navbar-kebab"></span>
-          </button>
-                    <div class="collapse navbar-collapse justify-content-end" id="navigation">
-
+                        <div class="collapse navbar-collapse justify-content-end" id="navigation">
+                        </div>
                     </div>
                 </div>
             </nav>
 
-            <div class="content">
+        <div class="content">
 
                 <div class="row">
                     <div class="col-md-4">
@@ -100,7 +104,7 @@
                                 <div class="stats">
                                     <div style="overflow: hidden;">
                                         <button type="button" id="profile1" class="btn btn-primary btn-round" data-toggle="modal" data-target="#myModal" style="float: left;">Patient Profile</button>
-                                        <button type="button" class="btn btn-primary btn-round" data-toggle="modal" data-target="#myModal" style="float: left;">Manage Bed</button>
+                                        <button type="button" class="btn btn-primary btn-round" data-toggle="modal" data-target="#managebedmodal1" style="float: left;">Manage Bed</button>
                                     </div>
                                 </div>
                             </div>
@@ -129,7 +133,7 @@
                                 <div class="stats">
                                     <div style="overflow: hidden;">
                                         <button type="button" id="profile2" class="btn btn-primary btn-round btn1" data-toggle="modal" data-target="#myModal" style="float: left;">Patient Profile</button>
-                                        <button type="button" class="btn btn-primary btn-round" data-toggle="modal" data-target="#myModal" style="float: left;">Manage Bed</button>
+                                        <button type="button" class="btn btn-primary btn-round" data-toggle="modal" data-target="#managebedmodal2" style="float: left;">Manage Bed</button>
                                     </div>
                                 </div>
                             </div>
@@ -158,7 +162,7 @@
                                 <div class="stats">
                                     <div style="overflow: hidden;">
                                         <button type="button" id="profile3" class="btn btn-primary btn-round btn1" data-toggle="modal" data-target="#myModal" style="float: left;">Patient Profile</button>
-                                        <button type="button" class="btn btn-primary btn-round" data-toggle="modal" data-target="#myModal" style="float: left;">Manage Bed</button>
+                                        <button type="button" class="btn btn-primary btn-round" data-toggle="modal" data-target="#managebedmodal" style="float: left;">Manage Bed</button>
                                     </div>
                                 </div>
                             </div>
@@ -188,7 +192,7 @@
                                 <div class="stats">
                                     <div style="overflow: hidden;">
                                         <button type="button" id="profile4" class="btn btn-primary btn-round btn1" data-toggle="modal" data-target="#myModal" style="float: left;">Patient Profile</button>
-                                        <button type="button" class="btn btn-primary btn-round" data-toggle="modal" data-target="#myModal" style="float: left;">Manage Bed</button>
+                                        <button type="button" class="btn btn-primary btn-round" data-toggle="modal" data-target="#managebedmodal" style="float: left;">Manage Bed</button>
                                     </div>
                                 </div>
                             </div>
@@ -217,7 +221,7 @@
                                 <div class="stats">
                                     <div style="overflow: hidden;">
                                         <button type="button" id="profile5" class="btn btn-primary btn-round btn1" data-toggle="modal" data-target="#myModal" style="float: left;">Patient Profile</button>
-                                        <button type="button" class="btn btn-primary btn-round" data-toggle="modal" data-target="#myModal" style="float: left;">Manage Bed</button>
+                                        <button type="button" class="btn btn-primary btn-round" data-toggle="modal" data-target="#managebedmodal" style="float: left;">Manage Bed</button>
                                     </div>
                                 </div>
                             </div>
@@ -225,8 +229,7 @@
                     </div>
 
                 </div>
-            </div>
-        </div>
+            
         <div id="myModal" class="modal fade" role="dialog">
             <div class="modal-dialog">
                 <!-- Modal content-->
@@ -361,7 +364,243 @@
 
             </div>
         </div>
+
         <!-- </div> -->
+        <div id="managebedmodal1" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <!-- <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Patient Details</h4>
+                    </div> -->
+                    <button type="button" class="close" data-dismiss="modal" style="position: absolute; right: 0; padding-right: 4px;">&times;</button>
+
+                    <div class="modal-body">
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="card card-user">
+                                    <div class="image">
+                                        <img src="../assets/img/damir-bosnjak.jpg" alt="...">
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="author">
+                                            <a href="#">
+                                                <img class="avatar border-gray" src="../assets/img/mike.jpg" alt="...">
+                                                <h5 class="title">Chet Faker</h5>
+                                            </a>
+                                            <p class="description">
+                                                @PICF101
+                                            </p>
+                                        </div>
+
+                                        <!-- </div> -->
+                                        <!-- <div class="card-footer"> -->
+                                        <hr>
+                                        <div class="button-container">
+                                            <div class="row">
+                                                <div class="col-lg-3 col-md-6 col-6 ml-auto">
+                                                    <h6>2
+                                                        <br>
+                                                        <small>Bed Number</small>
+                                                    </h6>
+                                                </div>
+                                                <div class="col-lg-4 col-md-6 col-6 ml-auto mr-auto">
+                                                    <h6>22
+                                                        <br>
+                                                        <small>Age</small>
+                                                    </h6>
+                                                </div>
+                                                <div class="col-lg-3 mr-auto">
+                                                    <h6>Female
+                                                        <br>
+                                                        <small>Gender</small>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <hr>
+                                        <div class="button-container">
+                                            <div class="row">
+                                                <div class="col-lg-6 col-md-6 col-6 mr-auto">
+                                                    <h6>Relation:
+                                                        <br>
+                                                        <h6>Wife +91-7379282571</h6>
+                                                        <!-- <h6>+91-7379282571</h6>-->
+                                                    </h6>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card card-user">
+                                    <div class="card-header">
+                                        <h5 class="card-title">Drip Details</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <ul>
+                                            <li class="water-bottle">
+                                                <div class="bottle">
+                                                    <div class="water-medium"> </div>
+                                                </div>
+                                                <div class="cap">
+                                                    <div class="cap-top">
+                                                    </div>
+                                                    <div class="cap-seal">
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                            <div style="width:50%; float:right;">
+                                                    <h5 id="patientname1">Patient Name: </h5>
+                                                    <h5 id="doctorname1">Doctor Name: </h5>
+                                                    <h5>Room Conditions </h5>
+                                                        <h6 id="temp1">Temperature:</h6>
+                                                        <h6 id="humidity1">Humidity:</h6>
+                                                    <h5 id="rate1">Current Rate: </h5>
+                                                    <h5 id="timeleft1">Time Left: </h5>
+                                                    <h5 id="medicine1">Time Left: </h5>
+                                            </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="card-footer">
+                                        <button id="Switch1" onclick="myFunction()"> Stop Drip</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div id="managebedmodal2" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <!-- <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Patient Details</h4>
+                    </div> -->
+                    <button type="button" class="close" data-dismiss="modal" style="position: absolute; right: 0; padding-right: 4px;">&times;</button>
+
+                    <div class="modal-body">
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="card card-user">
+                                    <div class="image">
+                                        <img src="../assets/img/damir-bosnjak.jpg" alt="...">
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="author">
+                                            <a href="#">
+                                                <img class="avatar border-gray" src="../assets/img/mike.jpg" alt="...">
+                                                <h5 class="title">Chet Faker</h5>
+                                            </a>
+                                            <p class="description">
+                                                @PICF101
+                                            </p>
+                                        </div>
+
+                                        <!-- </div> -->
+                                        <!-- <div class="card-footer"> -->
+                                        <hr>
+                                        <div class="button-container">
+                                            <div class="row">
+                                                <div class="col-lg-3 col-md-6 col-6 ml-auto">
+                                                    <h6>2
+                                                        <br>
+                                                        <small>Bed Number</small>
+                                                    </h6>
+                                                </div>
+                                                <div class="col-lg-4 col-md-6 col-6 ml-auto mr-auto">
+                                                    <h6>22
+                                                        <br>
+                                                        <small>Age</small>
+                                                    </h6>
+                                                </div>
+                                                <div class="col-lg-3 mr-auto">
+                                                    <h6>Female
+                                                        <br>
+                                                        <small>Gender</small>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <hr>
+                                        <div class="button-container">
+                                            <div class="row">
+                                                <div class="col-lg-6 col-md-6 col-6 mr-auto">
+                                                    <h6>Relation:
+                                                        <br>
+                                                        <h6>Wife +91-7379282571</h6>
+                                                        <!-- <h6>+91-7379282571</h6>-->
+                                                    </h6>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card card-user">
+                                    <div class="card-header">
+                                        <h5 class="card-title">Drip Details</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <ul>
+                                            <li class="water-bottle">
+                                                <div class="bottle">
+                                                    <div class="water-medium"> </div>
+                                                </div>
+                                                <div class="cap">
+                                                    <div class="cap-top">
+                                                    </div>
+                                                    <div class="cap-seal">
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        
+                                            <li>
+                                            <div style="width:50%; float:right;">
+                                                    <h5 id="patientname2">Patient Name: </h5>
+                                                    <h5 id="doctorname2">Doctor Name: </h5>
+                                                    <h5>Room Conditions </h5>
+                                                        <h6 id="temp2">Temperature:</h6>
+                                                        <h6 id="humidity2">Humidity:</h6>
+                                                    <h5 id="rate2">Current Rate: </h5>
+                                                    <h5 id="timeleft2">Time Left: </h5>
+                                                    <h5 id="medicine2">Medicine: </h5>
+                                            </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="card-footer">
+                                        <button id="Switch2"> Stop Drip</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
     </div>
     <!--   Core JS Files   -->
     <script src="../assets/js/core/jquery.min.js"></script>
@@ -397,6 +636,7 @@
                     var dripname = "drip" + i;
 
                     info = data[bedname];
+                    if (info != undefined) {
                     var vacancy = info['patient'];
                     if (vacancy == 1) {
                         document.getElementById("occupied" + i).style.color = "#6bd098";
@@ -404,26 +644,62 @@
                         document.getElementById("occupied" + i).style.color = "grey";
                         continue;
                     }
+                    }
                     if (info != undefined) {
                         keys = ['patientname', 'doctorname', 'medicine', 'rate', 'timeleft'];
                         keys.forEach(key => {
                             value = info[key];
                             var el = document.getElementById(key + bedname);
+                            var el2 = document.getElementById(key + i);
                             if (el != null) {
                                 el.innerHTML += value;
+                            }
+                            if (el2 != null) {
+                                el2.innerHTML += value;
                             }
                         });
                         var level = info['Level'];
                         console.log(level);
                         var y = document.getElementById("drip" + i);
                         var style = document.createElement('style');
-                        level = Math.floor((Math.random() * 100) + 1);
+                        //level = Math.floor((Math.random() * 100) + 1);
                         style.innerHTML = `@keyframes mymove {0% {top: 100%;background: purple}100%{top:` + level + `%;background: #add8e6}}`;
                         y.appendChild(style);
                     }
                 }
             });
     </script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-analytics.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-database.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDIrVMXhqTM6kYkYUhtrXvqEu-4Gp8IoSY",
+    authDomain: "drip-9a9cf.firebaseapp.com",
+    databaseURL: "https://drip-9a9cf.firebaseio.com",
+    projectId: "drip-9a9cf",
+    storageBucket: "drip-9a9cf.appspot.com",
+    messagingSenderId: "863978708489",
+    appId: "1:863978708489:web:2b656f41ea3228fe9aa2d8",
+    measurementId: "G-DW596LF5QD"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+  function myFunction() {
+    var ref = firebase.database().ref("Beds").child("Bed1");
+    ref.update({"Switch1":0});
+  }
+  
+</script>
+
 </body>
 
 </html>
